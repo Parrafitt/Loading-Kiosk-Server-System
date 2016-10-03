@@ -1,0 +1,272 @@
+
+================================================================================
+================================================================================
+-- System Title: Loading Kiosk Server System (LKSS)
+-- Company:
+-- Address:
+-- Date Started: April 7, 2016
+================================================================================
+================================================================================
+
+'-------------------------------------------------------------------------------
+'=-Target Unit Specification ****
+'-------------------------------------------------------------------------------
+  * 2.70 Ghz Dual Core
+  * 1014mb RAM
+  * 256mb Graphics
+  * 75gb Hard Disk
+  * Windows Xp Professional
+
+
+'-------------------------------------------------------------------------------
+'=-Project Properties Setup ****
+'-------------------------------------------------------------------------------
+  * Checked 'Make single instance application'
+  * Shutdown Mode: When last form closes
+  * Added References
+    - MySql.Data 6.3.7.0 - v4.0.30319
+    - DevComponents.DotNetBar2
+
+
+'-------------------------------------------------------------------------------
+'=-MySql Database Setup ****
+'-------------------------------------------------------------------------------
+  * userID: 
+  * database:
+  * password: 
+  * datasource:
+
+
+================================================================================
+=- EDIT LOG -=
+================================================================================
+
+
+
+'-------------------------------------------------------------------------------
+'=-160614 - 0001 - Version 0.0.1
+'-------------------------------------------------------------------------------
+=-Added new forms
+  * frmMain
+  * frmSysAbout
+  * frmSysAccessConfirm
+  * frmSysDBexec
+  * frmSysLogin
+  * frmSysPatcher
+  * frmSysSettings
+  * frmSysSpashScreen
+  * mdlDefFrmFunc
+  * mdlGlobalFunc
+
+=-Database
+  * Added 'vendo_lks' Database
+  * Added 'man_user' table
+  * Added 'man_user_access' table
+  * Added 'set_other' table
+
+=-frmServer
+  * Added Form and UI Layout
+
+
+
+'-------------------------------------------------------------------------------
+'=-160615 - 0002 - Version 0.0.2
+'-------------------------------------------------------------------------------
+=-Properties
+  * Added 'TcpComm' dll reference
+
+=-frmServer
+  * Updated UI Layout
+  * Added '(02) TcpComm' Functions
+
+
+
+'-------------------------------------------------------------------------------
+'=-160616 - 0003 - Version 0.0.3
+'-------------------------------------------------------------------------------
+=-frmServer
+  * (03) Added 'Security Protocols' Function
+  * Updated UI LAYOUT
+
+
+
+'-------------------------------------------------------------------------------
+'=-160617 - 0004 - Version 0.0.4
+'-------------------------------------------------------------------------------
+=-frmServer
+  * (04) Added 'Transaction' Functions
+  * (04A) Added 'performTrans' Function
+  * (tmrTrans) Added timer object and Functions
+
+
+
+'-------------------------------------------------------------------------------
+'=-160709 - 0005 - Version 0.0.5
+'-------------------------------------------------------------------------------
+=-frmManMachine
+  * Added Form and UI LAYOUT
+
+=-Database
+  * (man_machine) Added new table
+  * (ref_mach_status) Added new table
+
+=-mdlDefFrmFunc
+  * (05) Edited: Added 'AlphaNum' Increment option
+
+
+
+'-------------------------------------------------------------------------------
+'=-160711 - 0006 - Version 0.0.6
+'-------------------------------------------------------------------------------
+=-frmManMachine
+  * (02A) Added filter and save/update for 'txtSn' Value
+
+
+
+'-------------------------------------------------------------------------------
+'=-160712 - 0007 - Version 0.0.7
+'-------------------------------------------------------------------------------
+=-frmServer
+  * Updated 'lvTransQueue' and 'lvTransComplete' Columns
+
+
+
+'-------------------------------------------------------------------------------
+'=-160802 - 0008 - Version 0.0.8
+'-------------------------------------------------------------------------------
+=-frmServer
+  * (03F) Edited: Updated 'Machine Registration' Procedures
+
+
+
+'-------------------------------------------------------------------------------
+'=-160831 - 0009 - Version 0.0.9
+'-------------------------------------------------------------------------------
+=-Database
+  * Added 'ref_net_prefix' Table
+  * Added 'man_item' table
+
+=-frmManNetwork
+  * Added UI Layout
+
+
+
+'-------------------------------------------------------------------------------
+'=-160901 - 0010 - Version 0.1.0
+'-------------------------------------------------------------------------------
+=-frmManNetwork
+  * (03A) Added 'Logo Functions'
+  * (03B) Added 'Prefix List' Functions
+
+
+
+'-------------------------------------------------------------------------------
+'=-160903 - 0011 - Version 0.1.1
+'-------------------------------------------------------------------------------
+=-frmManNetwork
+  * Improved search function
+
+
+
+'-------------------------------------------------------------------------------
+'=-160905 - 0012 - Version 0.1.2
+'-------------------------------------------------------------------------------
+=-Database
+  * (ref_service) Added new table
+
+=-frmManItem
+  * Added new Form
+
+
+
+'-------------------------------------------------------------------------------
+'=-160906 - 0013 - Version 0.1.3
+'-------------------------------------------------------------------------------
+=-Database
+  * (ref_itm_package) Added new table
+
+
+
+'-------------------------------------------------------------------------------
+'=-160908 - 0014 - Version 0.1.4
+'-------------------------------------------------------------------------------
+=-frmManFrachisee
+  * Added Form and UI Layout
+  * Added functions
+
+=-frmManMachine
+  * (03C) Edited: Updated fetching of 'franchiseeInfo'
+
+=-mdlSysFunc
+  * (01B) Edited: Updated 'client' to 'franchisee'
+
+=-Database
+  * (ref_franchisee_type) Added new table
+
+
+
+'-------------------------------------------------------------------------------
+'=-160913 - 0015 - Version 0.1.5
+'-------------------------------------------------------------------------------
+=-frmServer
+  * (03F.7) Updated saving of 'Franchisee Info'
+
+
+
+'-------------------------------------------------------------------------------
+'=-160915 - 0016 - Version 0.1.6
+'-------------------------------------------------------------------------------
+=-Database
+  * (man_advertisement) Added new table
+  * (ref_ad_timeslot) Added new table
+  * (ref_ad_status) Added new table
+
+=-frmManAdvt
+  * Added form and UI Layout
+
+
+
+'-------------------------------------------------------------------------------
+'=-160928 - 0017 - Version 0.1.7
+'-------------------------------------------------------------------------------
+ ## MIGRATION FROM OLD VERSION ##
+
+=-frmSysSettings
+  *added "SMS Configuration"
+
+=-mdlSysFunc
+  *added:
+    Public iComPort1 As String
+    Public iBaudRate1 As String
+    Public iParity1 As String
+    Public iDataBits1 As String
+    Public iStopBits1 As String
+
+=- Resources
+  * added Images for sms
+
+=-mdlGlobalFunc
+ *AppendRibbonBarDelegate
+
+=-frmSysSettings
+ *added getNumber
+ *added getSignal
+ *enhance getDeviceStatus
+ *added txtcpNum
+ *added cboDongle
+
+=-frmServer
+ *added Imports Loading_Kiosk_Server_System.SMS.Decoder  
+ *added spDevice_datarecieve
+ *added getDataRecieve
+ *added getDeviceStatus
+ *added updateSMSlist
+ *added getSignal
+ *added getNumber
+ *added initSMS
+
+=-added SMS.vb
+'-------------------------------------------------------------------------------
+'=-160928 - 0018 - Version 0.1.7
+'-------------------------------------------------------------------------------
+ 
