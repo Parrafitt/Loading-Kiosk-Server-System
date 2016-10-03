@@ -8,6 +8,7 @@ Public Class frmLogMachine
 #Region "-=- Local Functions -=-"
 
     'local variables
+    Public test1 As String
     Public selectedPanel As String
     Public selectedRowIndex As Integer
     Public selectedGridIndex As Integer

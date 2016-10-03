@@ -134,9 +134,9 @@ Partial Class frmMain
         Me.MainRibbon.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.MainRibbon.CaptionVisible = True
         Me.MainRibbon.CategorizeMode = DevComponents.DotNetBar.eCategorizeMode.Categories
+        Me.MainRibbon.Controls.Add(Me.RibbonPanel4)
         Me.MainRibbon.Controls.Add(Me.panelLibrary)
         Me.MainRibbon.Controls.Add(Me.RibbonPanel1)
-        Me.MainRibbon.Controls.Add(Me.RibbonPanel4)
         Me.MainRibbon.Dock = System.Windows.Forms.DockStyle.Top
         Me.MainRibbon.Expanded = False
         Me.MainRibbon.Items.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.Office2007StartButton1, Me.rbiHome, Me.rbiList, Me.rbiLog, Me.lblDisplayDate})
@@ -193,6 +193,7 @@ Partial Class frmMain
         '
         Me.panelLibrary.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.panelLibrary.TabIndex = 5
+        Me.panelLibrary.Visible = False
         '
         'rbNetwork
         '
@@ -955,7 +956,6 @@ Partial Class frmMain
         '
         Me.RibbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.RibbonPanel4.TabIndex = 4
-        Me.RibbonPanel4.Visible = False
         '
         'RibbonBar7
         '
@@ -1141,13 +1141,13 @@ Partial Class frmMain
         '
         'rbiHome
         '
+        Me.rbiHome.Checked = True
         Me.rbiHome.Name = "rbiHome"
         Me.rbiHome.Panel = Me.RibbonPanel4
         Me.rbiHome.Text = "Home"
         '
         'rbiList
         '
-        Me.rbiList.Checked = True
         Me.rbiList.Name = "rbiList"
         Me.rbiList.Panel = Me.panelLibrary
         Me.rbiList.Text = "List"
